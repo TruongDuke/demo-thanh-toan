@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Theo dõi thanh toán hợp đồng</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap">
+<style>
+:root{--bg:#f4f6f3;--surface:#fff;--ink:#1b2620;--muted:#5d6a63;--line:#dbe2dc;--xl:#107c41;--xl-ink:#fff;--xl-soft:#e1f1e7;
+  --f:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif}
+@media (prefers-color-scheme: dark){:root{--bg:#111613;--surface:#18201b;--ink:#e6ece8;--muted:#9aa8a0;--line:#2b3630;--xl:#3fbf7a;--xl-ink:#0b1a12;--xl-soft:#173324;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 var(--f)}
+.wrap{max-width:980px;margin:0 auto;padding:28px 16px 64px;display:grid;gap:22px}
+.badge{justify-self:start;font:700 12px var(--f);letter-spacing:.05em;text-transform:uppercase;background:var(--xl-soft);color:var(--xl);padding:4px 10px;border-radius:999px}
+h1{margin:0;font-size:clamp(28px,5vw,42px);line-height:1.1;font-weight:800;letter-spacing:-.02em;text-wrap:balance}
+h1 span{color:var(--xl)}
+header{display:grid;gap:10px}
+header p{margin:0;color:var(--muted);max-width:66ch}
+.btn{justify-self:start;display:inline-flex;gap:8px;align-items:center;font:700 16px var(--f);background:var(--xl);color:var(--xl-ink);text-decoration:none;padding:13px 22px;border-radius:10px}
+.btn:focus-visible{outline:3px solid var(--xl);outline-offset:3px}
+.note{font-size:13.5px;color:var(--muted);margin:0}
+.ds{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.ds li{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.ds b{display:block}
+.ds span{color:var(--muted);font-size:14.5px}
+.so{width:30px;height:30px;border-radius:50%;background:var(--xl);color:var(--xl-ink);display:grid;place-items:center;font-weight:800}
+figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+figure img{display:block;width:100%;height:auto}
+footer{font-size:13px;color:var(--muted);text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="badge">Bản demo · dữ liệu giả</span>
+    <h1>Nhập hóa đơn một lần, <span>bảng kê và tổng hợp tự ra</span></h1>
+    <p>Theo dõi thanh toán theo từng quyết định trúng thầu, từng hợp đồng, từng lần và từng tháng, ngay trong Excel. Không còn tạo sheet mới mỗi tháng rồi copy số tiền, số lần sang file tổng hợp.</p>
+    <a class="btn" href="Thanh-toan-theo-hop-dong_DEMO.xlsx" download>⬇ Tải file Excel demo</a>
+    <p class="note">Mở bằng Excel, sang sheet "Bảng kê", đổi số QĐ và lần thanh toán ở ô màu vàng để xem bảng kê tự đổi theo.</p>
+  </header>
+
+  <ul class="ds">
+    <li><span class="so">1</span><div><b>Chỉ nhập một danh sách hóa đơn</b><span>QĐ nào, lần mấy, số hóa đơn, ngày, số tiền. Nhập trùng số hóa đơn là tự tô đỏ.</span></div></li>
+    <li><span class="so">2</span><div><b>Chọn QĐ và lần thanh toán, bảng kê chứng từ tự ra đúng mẫu</b><span>Tên công ty, số tài khoản, hợp đồng, danh sách hóa đơn, giảm trừ, tổng tiền, số tiền bằng chữ, lũy kế so với giá trị hợp đồng.</span></div></li>
+    <li><span class="so">3</span><div><b>File tổng hợp tự cập nhật</b><span>Từng hợp đồng đã trả bao nhiêu, còn lại bao nhiêu, hợp đồng nào sắp hết hoặc vượt giá trị. Theo tháng: lần thứ mấy, bao nhiêu hóa đơn, bao nhiêu tiền.</span></div></li>
+  </ul>
+
+  <figure><img src="1-nhap-hoa-don.png" alt="Sheet Nhập hóa đơn: danh sách hóa đơn theo QĐ và lần thanh toán, dòng nhập trùng số hóa đơn được tô đỏ" loading="lazy"></figure>
+  <figure><img src="2-bang-ke.png" alt="Sheet Bảng kê: chọn QĐ 101 lần 9, bảng kê chứng từ thanh toán tự điền 39 hóa đơn, giảm trừ, số tiền bằng chữ và cảnh báo sắp hết giá trị hợp đồng" loading="lazy"></figure>
+  <figure><img src="3-tong-hop.png" alt="Sheet Tổng hợp: theo hợp đồng có đã trả, còn lại, cảnh báo vượt giá trị; theo tháng có lần thanh toán, số hóa đơn và số tiền" loading="lazy"></figure>
+
+  <footer>Chạy hoàn toàn bằng công thức Excel, không cần cài thêm, không cần macro · Bản demo, số liệu là giả<br>Cần làm theo đúng mẫu bên mình thì nhắn lại để được thiết kế riêng</footer>
+</div>
+</body>
+</html>
